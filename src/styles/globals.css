@@ -1,0 +1,54 @@
+html,
+body,
+#__next {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+#app {
+    position: relative;
+}
+
+#game-container canvas {
+    display: block;
+}
+
+.inside-out-message {
+    margin: 10px 0 0 10px;
+    font-size: 0.8em;
+}
+
+.outside-in-message {
+    margin: 10px 0 0 10px;
+    font-size: 0.8em;
+}
+
+.button {
+    width: 162px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #000000;
+    color: rgba(255, 255, 255, 0.87);
+    border: 1px solid rgba(255, 255, 255, 0.87);
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        border: 1px solid #0ec3c9;
+        color: #0ec3c9;
+    }
+
+    &:active {
+        background-color: #0ec3c9;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.3);
+    }
+}
