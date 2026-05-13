@@ -1,6 +1,9 @@
 import { EventBus } from "../EventBus";
 import PointDTO from "../general/dtos/PointDTO";
 import character_view_body_fullbody from "../objects/character/view/body/character.view.body.fullbody";
+import MapView from "../objects/map/view/map/mapView";
+import RoomView from "../objects/map/view/room/roomView";
+import { generateMap } from "../objects/map/generate/GenerateMap";
 
 export default class PlayScene extends Phaser.Scene {
     // private isDragging: boolean = false;
@@ -87,6 +90,8 @@ export default class PlayScene extends Phaser.Scene {
 
     create() {
         new character_view_body_fullbody(this, new PointDTO(400, 300));
+        const mapGrid = generateMap({ row: 5, col: 5 });
+        new MapView(this, new PointDTO(384, 512), mapGrid.grid);
         // // Lắng nghe chọn difficulty từ React UI
         // EventBus.once("select-difficulty", this.onDifficultySelected);
 

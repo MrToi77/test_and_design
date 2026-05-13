@@ -1,0 +1,1 @@
+export type sideType = ("left" | "right" | "top" | "bottom");
